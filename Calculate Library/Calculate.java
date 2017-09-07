@@ -26,12 +26,23 @@ public class Calculate {
 	public static double discriminant (double a, double b, double c) {
 		return (b * b) - (4 * a * c);
 	}
-	public static int 
+	public static int toImproperFrac (int wholeNumber, int numerator, int denominator) {
+		return (wholeNumber + numerator) / denominator;
+				// fix so it returns a string
+	}
+	public static int toMixedNum (int wholeNumber2, int numerator2, int denominator2) {
+		return 
+		// fix so it returns a string
+	}
+	public static int foil (int inputNumber6, int inputNumber7, int inputNumber8, int inputNumber9,char n) {
+		int a2 = (inputNumber6 * inputNumber8 * n * n);
+		int b2 = (inputNumber7 * inputNumber8 * n) + (inputNumber6 * inputNumber9 * n);
+		int c2 = (inputNumber7 * inputNumber9);
+		return (a2 + b2 + c2);
+				// not sure if this actually returns a string
+	}
 }
-	
-	
-	
-	
+
 	
 	
 	
