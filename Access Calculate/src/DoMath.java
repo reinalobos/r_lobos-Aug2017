@@ -8,4 +8,5 @@ public class DoMath {
 		Calculate.square(5);
 		System.out.println(Calculate.square(-5));
 	}
+	public static 
 }
