@@ -15,7 +15,7 @@ public class Calculate {
 		return (inputNumber1 + inputnumber2 )/2;
 	}
 	public static double averageOf3 (double inputNumber3, double inputNumber4, double inputNumber5) {
-		return ( inputNumber3 + inputNumber4 + inputNumber5 )/2;
+		return ( inputNumber3 + inputNumber4 + inpu tNumber5 )/2;
 	}
 	public static double toDegrees (double inputRadian) {
 		return inputRadian * (180/3.14159); 
