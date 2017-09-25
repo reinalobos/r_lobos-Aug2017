@@ -80,11 +80,50 @@ public class Calculate {
 			return inputNum17;
 		}
 	}
-	public static double round2 (double inputNum18) {
-		if (inputNum18 * 1000 % 10 < 5) {
-			return ((inputNum18 * 1000) - (inputNum18 * 1000 % 10))/1000;
+	public static double round2 (double orig) {
+		double result = 0.0;
+		int tempInt = (int)(orig * 1000);
+		int roundNum = tempInt % 10;
+		tempInt = tempInt / 10;
+		if (roundNum >= 5 && tempInt > 0) {
+			tempInt++;
+		} else if (roundNum <= -5 && tempInt < 0) {
+			tempInt--;	
+		}
+		result = tempInt / 100.0;
+		return result;
+	}
+	public static double exponent(double base, int exponent) {
+		if(exponent < 0) {
+			throw new IllegalArgumentException();
+		}
+		double result = 1;
+		for(int i = 0; i < exponent; i++) {
+			result *= base;
+		}
+		return result;
+	}public static int factorial(int input18) {
+		if(input18 < 0) {
+			throw new IllegalArgumentException();
+		}
+		int result = input18;
+		for(int i = 1; i < input18; i++) {
+			result *= input18 - i;
+		}
+		return result;
+	}
+	public static boolean isPrime(int input) {
+		if(input < 2) {
+			return false;
+		} else if(input == 2) {
+			return true;
 		} else {
-			return ((inputNum18 * 1000) + (10 - (inputNum18 * 1000 % 10)))/1000;
+			for(int i = 2; i < input; i++) {
+				if(isDivisibleBy(input, i)) {
+					return false;
+				}
+			}
+			return true;
 		}
 	}
 }
