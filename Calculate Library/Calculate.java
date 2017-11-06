@@ -6,11 +6,13 @@ public class Calculate {
 	
 	public static int square (int operand) {
 		return operand * operand;
+		
 /*This method takes an integer and returns its square*/
 	} 
-	public static int cube (int number) {
-		return number * number *number;
+	public static int cube (int inputNumber) {
+		return inputNumber * inputNumber *inputNumber;
 	}
+<<<<<<< HEAD
 	public static double average (double inputNumber1, double inputnumber2) {
 		return (inputNumber1 + inputnumber2 )/2;
 	}
@@ -19,6 +21,13 @@ public class Calculate {
 	}
 	public static double averageOf3 (double inputNumber3, double inputNumber4, double inputNumber5) {
 		return ( inputNumber3 + inputNumber4 + inputNumber5 )/2;
+=======
+	public static double averageOf2 (double inputNumber, double inputnumber2) {
+		return (inputNumber + inputnumber2 )/2;
+	}
+	public static double averageOf3 (double inputNumber, double inputNumber2, double inputNumber3) {
+		return ( inputNumber + inputNumber2 + inputNumber3 )/2;
+>>>>>>> branch 'master' of https://github.com/reinalobos/r_lobos-Aug2017.git
 	}
 	public static double toDegrees (double inputRadian) {
 		return inputRadian * (180/3.14159); 
@@ -33,16 +42,25 @@ public class Calculate {
 		return (wholeNumber * denominator + numerator) + "/" +  denominator;
 				// fix so it returns a string
 	}
-	public static String toMixedNum (int wholeNumber2, int numerator2, int denominator2) {
-		return (numerator2 / denominator2) + " " + (numerator2 % denominator2) + "/" + denominator2; 
+	public static String toMixedNum (int wholeNumber, int numerator, int denominator) {
+		return (numerator / denominator) + " " + (numerator % denominator) + "/" + denominator; 
 		// fix so it returns a string
 	}
+<<<<<<< HEAD
 	public static String foil (int inputNumber6, int inputNumber7, int inputNumber8, int inputNumber9,char n) {
 		int a2 = (inputNumber6 * inputNumber8 * n * n);
 		int b2 = (inputNumber7 * inputNumber8 * n) + (inputNumber6 * inputNumber9 * n);
 		int c2 = (inputNumber7 * inputNumber9);
 		return ("a2 + b2 + c2");
 				// not sure if this actually returns a string
+=======
+	public static String foil (int inputNumber, int inputNumber2, int inputNumber3, int inputNumber4,String variable) {
+		int numOne = inputNumber *inputNumber3;
+		int numTwo = (inputNumber * inputNumber4) + (inputNumber2 * inputNumber3);
+		int numThree = inputNumber2 * inputNumber4;
+		
+		return numOne + variable + "^2" + " + " + numTwo + variable + " + " + numThree;
+>>>>>>> branch 'master' of https://github.com/reinalobos/r_lobos-Aug2017.git
 	}
 
 	public static boolean isDivisibleBy (int diviser, int dividend) { 
@@ -52,46 +70,91 @@ public class Calculate {
 			return false;
 		}
 	}
-	public static double absValue (double inputNumber10) {
-		if (inputNumber10 < 0) {
-			return -inputNumber10;
-		} else if (inputNumber10 == 0){ 
+	public static double absValue (double inputNumber) {
+		if (inputNumber < 0) {
+			return -inputNumber;
+		} else if (inputNumber == 0){ 
 			return 0;
 		} else {
-			return inputNumber10;
+			return inputNumber;
 		}
 	}
-	public  static double max (double inputNum11, double inputNum12) {
-		if (inputNum11 > inputNum12) {
-			return inputNum11;
+	public  static double max (double inputNumber, double inputNumber2) {
+		if (inputNumber > inputNumber2) {
+			return inputNumber;
 		} else { 
-			return inputNum12;
+			return inputNumber2;
 		}
 	}
-	public static double max (double inputNum13, double inputNum14, double inputNum15) {
-		if (inputNum13 > inputNum14 & inputNum13 > inputNum15) {
-			return inputNum13;
-		} else if (inputNum14 > inputNum15) {
-			return inputNum14;
+	public static double max (double inputNumber, double inputNumber2, double inputNumber3) {
+		if (inputNumber > inputNumber2 & inputNumber > inputNumber3) {
+			return inputNumber;
+		} else if (inputNumber2 > inputNumber3) {
+			return inputNumber2;
 		} else {
-			return inputNum15;
+			return inputNumber3;
 		}
 	}
-	public static int min (int inputNum16, int inputNum17) {
-		if(inputNum16 < inputNum17) {
-			return inputNum16;
+	public static int min (int inputNumber, int inputNumber2) {
+		if(inputNumber < inputNumber2) {
+			return inputNumber;
 		} else {
-			return inputNum17;
+			return inputNumber2;
 		}
 	}
-	public static double round2 (double inputNum18) {
-		if (inputNum18 * 1000 % 10 < 5) {
-			return ((inputNum18 * 1000) - (inputNum18 * 1000 % 10))/1000;
-		} else {
-			return ((inputNum18 * 1000) + (10 - (inputNum18 * 1000 % 10)))/1000;
+	public static double round2 (double orig) {
+		double result = 0.0;
+		int tempInt = (int)(orig * 1000);
+		int roundNum = tempInt % 10;
+		tempInt = tempInt / 10;
+		if (roundNum >= 5 && tempInt > 0) {
+			tempInt++;
+		} else if (roundNum <= -5 && tempInt < 0) {
+			tempInt--;	
 		}
+<<<<<<< HEAD
 	}
 	
+=======
+		result = tempInt / 100.0;
+		return result;
+	}
+	public static double exponent(double base, int exponent) {
+		if(exponent < 0) {
+			throw new IllegalArgumentException();
+		}
+		double result = 1;
+		for(int i = 0; i < exponent; i++) {
+			result *= base;
+		}
+		return result;
+	}public static int factorial(int inputNumber) {
+		if(inputNumber < 0) {
+			throw new IllegalArgumentException();
+		}
+		int result = inputNumber;
+		for(int i = 1; i < inputNumber; i++) {
+			result *= inputNumber - i;
+		}
+		return result;
+	}
+	public static  boolean isPrime (int input) {
+		if(input < 2) {
+			return false;
+		} else if(input == 2) {
+			return true;
+		} else {
+			for(int i = 2; i <= input; i++) {
+				if(isDivisibleBy(i, input)) {
+					return false;
+				}else {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+>>>>>>> branch 'master' of https://github.com/reinalobos/r_lobos-Aug2017.git
 }
 
 																																																																																																																																																																																											
