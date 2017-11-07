@@ -112,11 +112,10 @@ public class Calculate {
 		} else if (roundNum <= -5 && tempInt < 0) {
 			tempInt--;	
 		}
-<<<<<<< HEAD
-	}
+
 	
-=======
-		result = tempInt / 100.0;
+
+	result = tempInt / 100.0;
 		return result;
 	}
 	public static double exponent(double base, int exponent) {
@@ -154,7 +153,7 @@ public class Calculate {
 		}
 		return false;
 	}
->>>>>>> branch 'master' of https://github.com/reinalobos/r_lobos-Aug2017.git
+
 }
 
 																																																																																																																																																																																											
