@@ -10,6 +10,9 @@ public class FracCalc {
     	Scanner userInput = new Scanner(System.in);
     	String input = userInput.nextLine();
     	System.out.println(produceAnswer(input));
+    	//String firstOperand = "2_3/4";
+    	 //String[] operand1 = firstOperand.split("_|/");
+    	// System.out.println(Arrays.toString(operand1));
     }
     
     // ** IMPORTANT ** DO NOT DELETE THIS FUNCTION.  This function will be used to test your code
@@ -21,16 +24,16 @@ public class FracCalc {
     // The function should return the result of the fraction after it has been calculated
     //      e.g. return ==> "1_1/4"
     public static String produceAnswer(String input){ 
-       String[] inputToArray = input.split(" ");
+      
+    //checkpoint 1
+    	String[] inputToArray = input.split(" ");
        String firstOperand = inputToArray[0];
        String operator = inputToArray[1];
        String secondOperand = inputToArray[2];
        return secondOperand;
-    	// TODO: Implement this function to produce the solution to the input
-        
-        
+       String[] operand1 = firstOperand.split("_|/");
+    	// TODO: Implement this function to produce the solution to the input    
     }
-
     // TODO: Fill in the space below with any helper methods that you think you will need
     
 }
