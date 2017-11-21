@@ -17,7 +17,7 @@ public class FracCalc {
     	//String firstOperand = "2_3/4";
     	 //String[] operand1 = firstOperand.split("_|/");
     	// System.out.println(Arrays.toString(operand1));
-    	} while (goAgain != "Q");
+    	} while (goAgain !="Q");
     }
 
 		// TODO Auto-generated method stub
@@ -32,42 +32,47 @@ public class FracCalc {
     //        
     // The function should return the result of the fraction after it has been calculated
     //      e.g. return ==> "1_1/4"
-    public static String produceAnswer(String input){ 
-      
-    //checkpoint 1
-    	String[] inputToArray = input.split(" ");
-       String firstOperand = inputToArray[0];
-       String operator = inputToArray[1];
-       String secondOperand = inputToArray[2];
-       String[] input1 = firstOperand.split("_|/");
-       String[] input2 = secondOperand.split("_|/");
-     return OperandsBrokenDown(firstOperand, secondOperand);
+   
+	public static int[] produceAnswer(String input){ 
+   //checkpoint 1
+		String[] inputToArray = input.split(" ");
+        String firstOperand = inputToArray[0];
+        String operator = inputToArray[1];
+        String secondOperand = inputToArray[2];
+        return OperandsBrokenDown(secondOperand);
        
       // return input2BrokenDown;
     	// TODO: Implement this function to produce the solution to the input    
     }
     // TODO: Fill in the space below with any helper methods that you think you will need
-    public static String OperandsBrokenDown (String firstoperand, String secondOperand) {
-    	String[] input1 = firstoperand.split("_|/");
-         String[] input2 = secondOperand.split("_|/");
-         String input1BrokenDown =  "whole:" + input1[0] + " numerator:" + input1[1] + " denominator:" + input1[2];
-         String input2BrokenDown = "whole:" + input2[0] + " numerator:" + input2[1] + " denominator:" + input2[2];
-         for (int i = 0; i < 2; i++) {
-        		 if (input1[i] == "null") {
-        		 input1[i] = "0";
-        	 }
-         }
-         if (input1[2] == "null") {
-        	input1[2] = "1";
-        }
-         for (int i = 0; i < 2; i++) {
-    		 if (input2[i] == "null") {
-    		 input2[i] = "0";
-    	 }
-     }
-        if (input2[2] == "null") {
-        	input2[2] = "1";
-        }
-         return input2BrokenDown;
+    public static int[] OperandsBrokenDown (String operand) {
+    	//String[] input1 = firstOperand.split("_|/");
+      //  String[] input2  = secondOperand.split("_|/");
+       int wholeNumber = 0;
+       int numerator = 0;
+       int denominator = 1;
+    //this method separates each operand into the whole number, numerator, and denominator       
+    	if (!(operand.indexOf("/")>0)){
+    		//if operand is an integer
+    		wholeNumber = Integer.parseInt(operand);
+    		}
+    	else if (!(operand.indexOf("_")>0) && (operand.indexOf("/")>0)){
+    		//if operand is a fraction
+    		numerator = Integer.parseInt(operand.substring(0, operand.indexOf("/")));
+    		denominator = Integer.parseInt(operand.substring(operand.indexOf("/")+1));
+    		}
+    	else {
+    		//if operand is a mixed number	
+    		numerator = Integer.parseInt(operand.substring(operand.indexOf("_")+1, operand.indexOf("/")));
+    		denominator = Integer.parseInt(operand.substring(operand.indexOf("/")+1));
+    		wholeNumber = Integer.parseInt(operand.substring(0,operand.indexOf("_")));
+    		}  
+    	
+    	//method returns the components as elements of an array
+    	int[] components = new int[3];
+    	components [0] = numerator;
+    	components [1] = denominator;
+    	components [2] = wholeNumber;
+    	return components;
     }
 }

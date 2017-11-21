@@ -12,7 +12,7 @@ public class Calculate {
 	public static int cube (int inputNumber) {
 		return inputNumber * inputNumber *inputNumber;
 	}
-<<<<<<< HEAD
+
 	public static double average (double inputNumber1, double inputnumber2) {
 		return (inputNumber1 + inputnumber2 )/2;
 	}
@@ -21,13 +21,13 @@ public class Calculate {
 	}
 	public static double averageOf3 (double inputNumber3, double inputNumber4, double inputNumber5) {
 		return ( inputNumber3 + inputNumber4 + inputNumber5 )/2;
-=======
+	}
 	public static double averageOf2 (double inputNumber, double inputnumber2) {
 		return (inputNumber + inputnumber2 )/2;
 	}
 	public static double averageOf3 (double inputNumber, double inputNumber2, double inputNumber3) {
 		return ( inputNumber + inputNumber2 + inputNumber3 )/2;
->>>>>>> branch 'master' of https://github.com/reinalobos/r_lobos-Aug2017.git
+
 	}
 	public static double toDegrees (double inputRadian) {
 		return inputRadian * (180/3.14159); 
