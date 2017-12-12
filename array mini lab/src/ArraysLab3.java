@@ -36,19 +36,21 @@ public class ArraysLab3 {
 	* except for the element at index idx (thus, the returned array has a length of arr.length – 1). 
 	* You can assume arr has at least two elements.
 	*/
-	public static int[] remove(int[] arr, int idx)
-	{
-	assert (arr.length >= 2);
+	public static int[] remove(int[] arr, int idx){
+		for (int i = 0; i <)
+		assert (arr.length >= 2);
 	}
 	/*
 	* Write a method sumEven that accepts an array of integers arr 
 	* and returns an integer containing the sum of the elements at the even indices of arr. 
 	* (That means elements at indices 0,2,4,6,8.) You can assume arr has at least one element.
 	*/
-	public static int sumEven(int[] arr)
-	{
-	assert (arr.length > 0);
-
+	public static int sumEven(int[] arr){
+		int sum = 0;
+		for(int i = 0; i < arr.length; i += 2) {
+		sum += arr[i];
+		}
+		return sum;
 	}
 	/*
 	* Write a method rotateRight that accepts an array of integers arr 
@@ -57,10 +59,13 @@ public class ArraysLab3 {
 	* (element 0 goes to element 1, element 1 goes to element 2, …, element n-1 goes to element 0). 
 	* You can assume arr has at least one element.
 	*/
-	public static void rotateRight(int[] arr)
-	{
-	assert (arr.length > 0);
-
+	public static void rotateRight(int[] arr){
+		int last = arr[arr.length - 1];
+		for (int i = arr.length - 1; i >= 1; i--) {
+		;	arr[i] = arr[i-1];
+		}
+		arr[0] = last;
+		assert (arr.length > 0);
 	}
 
 	/*

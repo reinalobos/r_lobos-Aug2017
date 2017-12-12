@@ -1,9 +1,9 @@
 //Reina Lobos
 // 7 Nov 2017
-package fracCalc;
+package fracCalcOld;
 import java.util.*;
 
-public class FracCalc {
+public class FracCalcOld {
    
 	public static void main(String[] args){
         // TODO: Read the input from the user and call produceAnswer with an equation
