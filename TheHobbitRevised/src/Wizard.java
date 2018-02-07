@@ -19,11 +19,11 @@ public class Wizard extends Traveler
 	
 	public void travel(int miles)
 	{
-		
+	
 	}
 	
 	public String getName()
-	{
+	{return name; 
 		
 	}
 }
