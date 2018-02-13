@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class ThereAndBackAgain 
 {
@@ -9,7 +9,6 @@ public class ThereAndBackAgain
 		Hobbit frodo = new Hobbit("Frodo");
 		Hobbit sam = new Hobbit("Sam");
 		Dwarf gimli = new Dwarf("Gimli");
-		
 		//create a party called party1 by creating an array of Travelers 
 		// and filling it with frodo, sam, and gimli
 		Traveler[] party1 = {frodo, sam, gimli};
@@ -47,7 +46,8 @@ public class ThereAndBackAgain
 		// Call the createParty method and pass it party2 and the dwarfNames array.
 		createParty(party2,dwarfNames);
 		for (int i = 0; i < party2.size(); i++) {
-			System.out.print(party2.get(i));
+			//System.out.print()
+			party2.get(i);
 		}
 		// Finally, call the allTravel method passing it party2 and 100 (representing
 		// the 100 miles that party2 has traveled together.  
