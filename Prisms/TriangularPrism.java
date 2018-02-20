@@ -10,8 +10,13 @@
  */
 
 
-public class TriangularPrism 
-{
+public class TriangularPrism {
+	int sideA;
+	int sideB;
+	int sideC;
+	public double calcAreaOfBase() {}
+	public double calcPerimeter () {}
+	
 	
 	
 	

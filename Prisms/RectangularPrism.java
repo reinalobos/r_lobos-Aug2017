@@ -8,7 +8,9 @@ public class RectangularPrism
 {
 	private int length;
 	private int width;
-	public RectangularPrism(int length, int width){
+	public double calcAreaOfBase(){}
+	public double calcPerimeter (){}
+	public RectangularPrism(int height, int length, int width){
 		super(height);
 		this.length = length;
 		this.width= width;

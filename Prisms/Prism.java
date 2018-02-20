@@ -10,7 +10,7 @@
  */
 
 
-public class Prism {
+public abstract class Prism {
 	private int height;
 	public Prism(int height) {
 		this.height = height;
@@ -18,9 +18,20 @@ public class Prism {
 	public void areaOfBase() {
 		
 	}
-	public void calcPerimeter() {
 		
-	}
 	
+	public double getHeight () {
+		return height;
+	} 
+	public abstract double calcAreaOfBase();
+	public abstract double calcPerimeter ();
+	public double calcVolume (){
+		double vol = calcAreaOfBase()* height;
+		return vol;
+	}
+	public double calcSA() {
+		double SA = (calcPerimeter() * height) + calcAreaOfBase() * 2;
+		return SA;
+	}
 }
 	
