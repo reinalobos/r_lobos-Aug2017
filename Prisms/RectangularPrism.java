@@ -4,7 +4,7 @@
  * Provide a constructor and the methods required by its abstract superclass.  
  */
 
-public class RectangularPrism 
+public class RectangularPrism extends Prism
 {
 	private int length;
 	private int width;

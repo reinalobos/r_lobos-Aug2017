@@ -9,15 +9,19 @@
  * It uses half the perimeter.  (Why might you want to use 0.5 instead of 1/2?)
  */
 
-
-public class TriangularPrism {
+public class TriangularPrism extends Prism {
 	int sideA;
 	int sideB;
 	int sideC;
 	public double calcAreaOfBase() {}
 	public double calcPerimeter () {}
-	
-	
+	public TriangularPrism(int sideA, int sideB, int sideC, int height ) {
+		super(height);
+		this.sideA = sideA;
+		this.sideB = sideB;
+		this.sideC = sideC;
+
+	}
 	
 	
 	
