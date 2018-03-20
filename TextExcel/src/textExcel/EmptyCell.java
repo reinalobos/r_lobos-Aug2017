@@ -1,7 +1,8 @@
 package textExcel;
 
 public class EmptyCell implements Cell {
-	public String abbreviatedCellText(String input){
+	private String input;
+	public String abbreviatedCellText(){
 		// text for spreadsheet cell display, must be exactly length 10
 		if(input.length() < 10) {
 			String paddedInput = input;
@@ -16,8 +17,7 @@ public class EmptyCell implements Cell {
 			return input;
 		}
 	}
-	
-	public String fullCellText(String input) {
+	public String fullCellText() {
 		// text for individual cell inspection, not truncated or padded
 		return input;
 	}

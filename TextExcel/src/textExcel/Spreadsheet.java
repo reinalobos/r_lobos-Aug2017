@@ -3,6 +3,7 @@ package textExcel;
 // Update this file with your own code.
 
 public class Spreadsheet implements Grid{
+	private EmptyCell[][] spreadsheet;
 	public Spreadsheet(){
 		EmptyCell [][] spreadsheet= new EmptyCell [20][12];
 	}
@@ -15,8 +16,7 @@ public class Spreadsheet implements Grid{
 	
 
 	@Override
-	public int getRows()
-	{
+	public int getRows(){
 		// TODO Auto-generated method stub
 		return 20;
 	}
@@ -32,14 +32,23 @@ public class Spreadsheet implements Grid{
 	public Cell getCell(Location loc)
 	{
 		// TODO Auto-generated method stub
-		return null;
+		return spreadsheet[loc.getRow()][loc.getCol()];
+		
+
 	}
 
 	@Override
-	public String getGridText()
-	{
+	public String getGridText(){
 		// TODO Auto-generated method stub
-		return null;
+		String grid = "";
+		int rowNum = 1;
+		char colCounter = 'A';
+		for(int r = 1; r <= 20;r++) {
+			for(int c = 1; c <= 12;c++) {
+				grid
+			}
+		}
+		return grid;
 	}
 
 }
