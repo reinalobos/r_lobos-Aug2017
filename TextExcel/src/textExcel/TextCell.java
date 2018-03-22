@@ -5,13 +5,24 @@ public class TextCell implements Cell{
 	@Override
 	public String abbreviatedCellText() {
 		// TODO Auto-generated method stub
-		return null;
+		if(input.length() < 10) {
+			String paddedInput = input;
+			for (int i = 0; i < 10 - input.length(); i++) {
+				paddedInput += " ";
+			}
+			return paddedInput;
+		}else if (input.length() > 10) {
+			String truncatedInput = input.substring(0,9);
+			return truncatedInput;
+		}else {
+			return input;
+		}
 	}
-
 	@Override
 	public String fullCellText() {
 		// TODO Auto-generated method stub
-		return input;
+		String withQuotes = " \" + input + \"";
+		return withQuotes;
 	}
 	
 }
