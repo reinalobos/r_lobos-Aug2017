@@ -10,7 +10,7 @@ public class SpreadsheetLocation implements Location{
 	public SpreadsheetLocation(String cellName){
 		// TODO: Fill this out with your own code
 		char rowLetter = cellName.charAt(0);
-    	int columnNum = Integer.valueOf(cellName.substring(1 ,  cellName.length() - 1));
+    	//int columnNum = Integer.valueOf(cellName.substring(1 ,  cellName.length() - 1));
     	for(char col = 'a'; col < (char) ('a' + 20); col++) {
     		if(rowLetter == col) {
     			this.rowNum = rowLetter - 96;
@@ -27,15 +27,15 @@ public class SpreadsheetLocation implements Location{
     @Override
     public int getRow(){
         // TODO Auto-generated method stub
-    //	this.rowNum = Integer.parseInt;
-    	//		return rowNum - 1;
-    	this.rowNum = parseInt cellName.substring(1, cellName.length()-1);
+    
+    	this.rowNum = Integer.parseInt(location.substring(1));
+		return rowNum -1 ;
     }
 
     @Override
     public int getCol() {
         // TODO Auto-generated method stub
-    	int colNumber = Character.toUpperCase(str.charAt()) - 'A';
+    	//int colNumber = Character.toUpperCase(str.charAt()) - 'A';
     	this.columnNum = location.charAt(0);
     	return columnNum - 65;
     }

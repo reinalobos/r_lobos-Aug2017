@@ -12,7 +12,13 @@ public class Spreadsheet implements Grid{
 	{
 		// TODO Auto-generated method stub
 		return command;
-	}
+		//command.toLowerCase();
+		//if (command.equals("cell inspection")) {
+		//	return command.fullCellText();
+		//} else if (command.equals("clear")) {
+			//return getGridText();
+		}
+	//}
 	
 
 	@Override
@@ -45,7 +51,7 @@ public class Spreadsheet implements Grid{
 		char colCounter = 'A';
 		for(int r = 1; r <= 20;r++) {
 			for(int c = 1; c <= 12;c++) {
-				grid
+				grid += getCell(c,r);
 			}
 		}
 		return grid;
