@@ -11,8 +11,8 @@ public class TextExcel{
 	{
 	    // Add your command loop here
 		Scanner userInput = new Scanner(System.in);
-		while(userInput.next() != "quit") {
-			processCommand(userInput.next());
+		while(userInput.next().equals("quit") == false) {
+		//	processCommand(userInput.next());
 		}
 	}
 }

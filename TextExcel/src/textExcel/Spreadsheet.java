@@ -12,15 +12,32 @@ public class Spreadsheet implements Grid{
 	{
 		// TODO Auto-generated method stub
 		return command;
-		//command.toLowerCase();
-		//if (command.equals("cell inspection")) {
-		//	return command.fullCellText();
-		//} else if (command.equals("clear")) {
+	/*	command.toLowerCase();
+		if (command.contains("="){
+			command.split(" ", 3);
+			
+		} else if (command.contains("clear")) {
+			SpreadsheetLocation clear = new SpreadsheetLocation(command.substring(6, command.length()));
+			spreadsheet[clear.getRow()][clear.getCol()] = new EmptyCell();
 			//return getGridText();
+		}*/
+	}
+	public void clearAll(){
+		for(int i = 0; i < getRows(); i ++){
+			for(int j =0; j < getCols(); j++){
+				spreadsheet[i][j] = new EmptyCell();
+			} 
 		}
-	//}
-	
-
+	}
+	public void clearCell() {
+		
+	}
+	public void cellInspection(String command) {
+		
+	}
+	public void assignCell (String command) {
+		command.split(" ", 3);
+	}
 	@Override
 	public int getRows(){
 		// TODO Auto-generated method stub
@@ -51,10 +68,9 @@ public class Spreadsheet implements Grid{
 		char colCounter = 'A';
 		for(int r = 1; r <= 20;r++) {
 			for(int c = 1; c <= 12;c++) {
-				grid += getCell(c,r);
+				grid += ();
 			}
 		}
 		return grid;
 	}
-
 }
